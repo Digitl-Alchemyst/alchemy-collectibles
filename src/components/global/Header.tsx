@@ -6,6 +6,8 @@ import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import Search from "./Search";
+import { TrolleyIcon } from "@sanity/icons";
 
 const Header = () => {
   return (
@@ -17,16 +19,29 @@ const Header = () => {
               <Button
                 variant="default"
                 size="lg"
-                className="  text-transparent text-gradient-orange-purple"
+                className="text-transparent text-gradient-orange-purple"
               >
-                <Image src='./logo.jpg' alt='' width={50} height={50} className="h-10 w-10 rounded-full" />
-                <h3>Alchemy Collectibles</h3>
+                <Image
+                  src="/logo.jpg"
+                  alt=""
+                  width={50}
+                  height={50}
+                  className="h-8 w-8 rounded-full"
+                />
+                <h3 className="hidden sm:block">Alchemy Collectibles</h3>
               </Button>
-              {/* <span className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-orange-400 to-purple-400 opacity-50" /> */}
             </h1>
           </div>
-
-          <div className="flex items-center space-x-6">
+          <div className="hidden sm:block flex-1 mx-4">
+            <Search />
+          </div>
+          <div className="flex items-center space-x-2 sm:space-x-6">
+            <Link
+              className="flex items-center p-1 bg-dark-900 shadow hover:bg-dark-900/90 dark:bg-light-500 dark:hover:bg-light-500/90 border border-dark-900/10 dark:border-light-300/40 text-light-500 dark:text-dark-400 rounded-md"
+              href="/cart"
+            >
+              <TrolleyIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+            </Link>
             <ThemeToggle />
             <SignedOut>
               <SignInButton />
@@ -36,9 +51,11 @@ const Header = () => {
             </SignedIn>
           </div>
         </div>
+        <div className="sm:hidden border-t border-light-300 dark:border-dark-600 p-2">
+          <Search />
+        </div>
       </div>
-    </header>
-  );
+    </header>  );
 };
 
 export default Header;
