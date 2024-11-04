@@ -29,9 +29,9 @@
       "@/api/*": ["./src/app/api/*"],
       "@/c/*": ["./src/components/*"],
       "@/h/*": ["./src/hooks/*"],
-      "@/s/*": ["./src/server/*"],
       "@/l/*": ["./src/lib/*"],
-      "@/u/*": ["./src/lib/util/*"]
+      "@/s/*": ["./src/server/*"],
+      "@/u/*": ["src/util/*"]
     },
     "rootDir": "./",
     "baseUrl": ".",
