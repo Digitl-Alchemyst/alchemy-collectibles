@@ -7,7 +7,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "tsc": "tsc --noEmit --skipLibCheck --noErrorTruncation",
+    "lint": "next lint",
+    "fix": "next lint --fix",
+    "check": "prettier --check .",
+    "format": "prettier --write .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepare": "husky",
+    "deploy": "vercel",
+    "prod": "vercel --prod"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
