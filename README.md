@@ -34,3 +34,44 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+### Sentry
+
+**Reinstall Sentry**
+1. Need instrumentaion.ts
+2. Need Next Config for Sentry
+
+
+## Tech Stack
+
+- Next.js 15.0.2
+    - App Router
+    - Server Components
+    - 'use cache'
+    - FORM component
+- React 19 canary
+    - useTransition
+- TypeScript 5.1.6
+- Tailwind CSS 3.3.3
+- Shadcn UI
+    - aceternity ui
+- Sanity
+    - Live Update
+    - Preview Mode
+    - groq with typegen
+- Clerk
+    - Webhooks
+    - Passkeys
+- Stripe
+    - Webhooks
+- Zustand
+    - Local Storage
+- Zod
+- Sentry
+- Vercel
+
+**ToDo**
+- Firebase
+- Auth.js
