@@ -19,6 +19,7 @@
     "prod": "vercel --prod"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.2.0",
     "@hookform/resolvers": "^3.9.1",
     "@next/third-parties": "^15.0.2",
     "@radix-ui/react-dropdown-menu": "^2.1.2",

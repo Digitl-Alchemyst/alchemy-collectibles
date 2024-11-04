@@ -7,6 +7,7 @@ import "../globals.css";
 import ThemeProvider from "../../components/providers/ThemeProvider";
 import Header from "@/components/global/Header";
 import Footer from "#/src/components/global/Footer";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -33,23 +34,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased`}
-      >
-        {/* <ErrorBoundary> */}
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+    <ClerkProvider dynamic>
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased`}
         >
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
-        {/* </ErrorBoundary> */}
-      </body>
-    </html>
+          {/* <ErrorBoundary> */}
+
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
+          {/* </ErrorBoundary> */}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

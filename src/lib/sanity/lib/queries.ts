@@ -10,7 +10,7 @@ export const queryBlogListByCategory = `
   } | order(_createdAt desc)
 `;
 
-export const queryBlogPostBySlug = `
+export const queryBlogBySlug = `
   *[_type == "blog" && slug.current == $slug][0] {
   
   }
