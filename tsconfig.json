@@ -42,8 +42,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "jest.config.ts",
-    "jest.setup.ts",
+    "src/lib/jest/jest.config.ts",
+    "src/lib/jest/jest.setup.ts",
     "build-utilities/generateRobots.mjs"
   ],
   "exclude": ["node_modules"]
